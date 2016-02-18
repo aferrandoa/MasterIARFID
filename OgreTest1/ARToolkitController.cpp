@@ -166,6 +166,7 @@ namespace ARToolkit {
 		}
 		
 		material->getTechnique(0)->getPass(0)->removeAllTextureUnitStates();
+		material->getTechnique(0)->getPass(0)->setEmissive(Ogre::ColourValue::White);
 		material->getTechnique(0)->getPass(0)->createTextureUnitState("DynamicTexture");
 		//material->getTechnique(0)->getPass(0)->setSceneBlending(Ogre::SBT_TRANSPARENT_ALPHA);
 	}

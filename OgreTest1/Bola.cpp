@@ -12,9 +12,10 @@ Bola::Bola(Ogre::ColourValue color, int numero, Ogre::Vector3 posicion)
 	Ogre::SceneManager* sceneManager = Ogre::Root::getSingleton().getSceneManager("escena");
 	Ogre::Entity *ent = sceneManager->createEntity("sphere.mesh");
 
-	Ogre::MaterialPtr materialBola = Ogre::MaterialManager::getSingleton().create("MaterialBola", Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
+	/*Ogre::MaterialPtr materialBola = Ogre::MaterialManager::getSingleton().create("MaterialBola", Ogre::ResourceGroupManager::DEFAULT_RESOURCE_GROUP_NAME);
 	materialBola->setAmbient(color);
-	ent->setMaterial(materialBola);
+	ent->setMaterial(materialBola);*/
+	ent->setMaterialName("Custom/BolaRoja");
 	ent->setCastShadows(true);
 
 	nodoBola = sceneManager->getRootSceneNode()->createChildSceneNode();
