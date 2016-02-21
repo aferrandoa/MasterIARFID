@@ -21,14 +21,14 @@ Bola::Bola(Ogre::ColourValue color, int numero, Ogre::Vector3 posicion)
 	nodoBola = sceneManager->getRootSceneNode()->createChildSceneNode();
 	nodoBola->setPosition(posicion);
 	nodoBola->attachObject(ent);
-	nodoBola->scale(Ogre::Vector3(0.25, 0.25, 0.25));
+	nodoBola->scale(Ogre::Vector3(RADIO/100, RADIO/100, RADIO/100));
 
 	PxPhysics* gPhysics = PhysxOgr::PhysxController::getInstance()->getPhysics();
 	PxScene* gScene = PhysxOgr::PhysxController::getInstance()->getScene();
 	PxMaterial* gMaterial = gPhysics->createMaterial(0.5f, 0.5f, 0.6f);
-	PxShape* shape = gPhysics->createShape(PxSphereGeometry(25), *gMaterial);
+	PxShape* shape = gPhysics->createShape(PxSphereGeometry(RADIO), *gMaterial);
 
-	PxRigidDynamic* body = gPhysics->createRigidDynamic(PxTransform(PxVec3(posicion.x, 25, posicion.z)));
+	body = gPhysics->createRigidDynamic(PxTransform(PxVec3(posicion.x, RADIO, posicion.z)));
 	body->attachShape(*shape);
 	PxRigidBodyExt::updateMassAndInertia(*body, 10.0f);
 	gScene->addActor(*body);
@@ -38,4 +38,10 @@ Bola::Bola(Ogre::ColourValue color, int numero, Ogre::Vector3 posicion)
 
 void Bola::dibujar(void)
 {
+}
+
+void Bola::update(void)
+{
+	PxTransform posicion = body->getGlobalPose();
+	nodoBola->setPosition(posicion.p.x, posicion.p.y, posicion.p.z);
 }

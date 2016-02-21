@@ -13,6 +13,7 @@ public:
 
 	static BolasController* getInstance(void);
 	void init(void);
+	void actualizarBolas(void);
 
 private:
 	static BolasController *mController;

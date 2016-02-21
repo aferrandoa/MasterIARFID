@@ -160,20 +160,20 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\OgreWikiTutorialFramework_1-9\OgreWikiTutorialFramework_1-9\BaseApplication.cpp" />
-    <ClCompile Include="..\..\..\OgreWikiTutorialFramework_1-9\OgreWikiTutorialFramework_1-9\TutorialApplication.cpp" />
     <ClCompile Include="ARToolkitController.cpp" />
+    <ClCompile Include="BaseApplication.cpp" />
     <ClCompile Include="Bola.cpp" />
     <ClCompile Include="BolasController.cpp" />
     <ClCompile Include="PhysxController.cpp" />
+    <ClCompile Include="TutorialApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\OgreWikiTutorialFramework_1-9\OgreWikiTutorialFramework_1-9\BaseApplication.h" />
-    <ClInclude Include="..\..\..\OgreWikiTutorialFramework_1-9\OgreWikiTutorialFramework_1-9\TutorialApplication.h" />
     <ClInclude Include="ARToolkitController.h" />
+    <ClInclude Include="BaseApplication.h" />
     <ClInclude Include="Bola.h" />
     <ClInclude Include="BolasController.h" />
     <ClInclude Include="PhysxController.h" />
+    <ClInclude Include="TutorialApplication.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

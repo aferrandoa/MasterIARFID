@@ -23,17 +23,24 @@ BolasController::~BolasController(void)
 
 void BolasController::init(void)
 {
-	int posx, posz = 0;
+	float posx, posz = 0;
 	int numBola = 0;
 
 	for (int fila = 0; fila < 5; fila++) {
-		posx = 44 * fila;
-		posz = -25 * fila;
+		posx = ((RADIO*2) - 0.75) * fila;
+		posz = -RADIO * fila;
 		for (int bola = 0; bola <= fila; bola++) {
-			Bola* nuevaBola = new Bola(Ogre::ColourValue::Red, numBola, Ogre::Vector3(posx, 25, posz));
-			posz += 50;
+			Bola* nuevaBola = new Bola(Ogre::ColourValue::Red, numBola, Ogre::Vector3(posx, RADIO, posz));
+			posz += RADIO*2;
 			vectorBolas[numBola] = nuevaBola;
 			numBola++;
 		}
+	}
+}
+
+void BolasController::actualizarBolas(void)
+{
+	for (int i = 0; i < NUM_BOLAS; i++) {
+		vectorBolas[i]->update();
 	}
 }

@@ -15,12 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\OgreWikiTutorialFramework_1-9\OgreWikiTutorialFramework_1-9\BaseApplication.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OgreWikiTutorialFramework_1-9\OgreWikiTutorialFramework_1-9\TutorialApplication.cpp">
-      <Filter>Archivos de código fuente</Filter>
-    </ClCompile>
     <ClCompile Include="ARToolkitController.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
@@ -33,14 +27,14 @@
     <ClCompile Include="BolasController.cpp">
       <Filter>Archivos de código fuente</Filter>
     </ClCompile>
+    <ClCompile Include="BaseApplication.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
+    <ClCompile Include="TutorialApplication.cpp">
+      <Filter>Archivos de código fuente</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\OgreWikiTutorialFramework_1-9\OgreWikiTutorialFramework_1-9\BaseApplication.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\OgreWikiTutorialFramework_1-9\OgreWikiTutorialFramework_1-9\TutorialApplication.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="ARToolkitController.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -51,6 +45,12 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="BolasController.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseApplication.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="TutorialApplication.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
